@@ -44,6 +44,7 @@ def script():
             print(decrypt_it(atb))
         else:
             print("Sorry I didn't understand that...\n")
+    
     elif choose_cipher.upper() == "KEYWORD":
         our_keyword = input("What keyword would you like to use? ")
         key.get_keyword(our_keyword)
@@ -54,6 +55,7 @@ def script():
             print(decrypt_it(key))
         else:
             print("Sorry I didn't understand that...\n")
+    
     elif choose_cipher.upper() == "POLYBIUS":
         action = user_input()
         if action.upper() == "ENCRYPT":
@@ -62,6 +64,7 @@ def script():
             print(decrypt_it(poly))
         else:
             print("Sorry I didn't understand that...\n")
+    
     else:
         print("I didn't understand that, please try again!\n")
 
