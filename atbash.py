@@ -25,17 +25,7 @@ class Atbash(Cipher):
         return ''.join(atbash_code)
 
     def decrypt(self, text):
-        """Decrypts a message provided by the user using the index
-        positions of the reversed_alphabet list
+        """Decrypts a message using the same logic as the
+        encrypt method above
         """
-        text = text.upper()
-        atbash_code = []
-
-        for item in text:
-            try:
-                index = self.reversed_alphabet.index(item)
-            except ValueError:
-                atbash_code.append(item)
-            else:
-                atbash_code.append(self.alphabet[index])
-        return ''.join(atbash_code)
+        return self.encrypt(text)
